@@ -1,5 +1,7 @@
-# sam_annotator
-A simple opencv gui with minimal dependencies that lets a user annotate instance segmenation data with Segment Anything Model, assumes that youre creating class-agnostic detections meaning everything gets stored with the same class ID. This was used to annotate data used for the traiing a mouse detection model (DAMM)
+# GUI for interactive segmentation with Segment Anything Model
+A simple opencv gui with minimal dependencies that lets a user annotate instance segmenation data with Segment Anything Model turning user clicks into masks. This annotate assumes that you're creating class-agnostic detection dataset meaning everything gets stored with the same class ID. 
+
+This was developed to quickly annotate instance segementation datasets used for training a mouse detection model (DAMM)
 
 ## (1) Setup our codebase locally 
 
@@ -24,5 +26,5 @@ Click the links below to download the checkpoint for the corresponding model typ
 
 ## (3) Start annotating
 
-to start the GUI, make cure you are in your conda enviornment and run:
+to start the GUI, make sure you are in your conda enviornment and run:
 
