@@ -1,0 +1,9 @@
+tqdm
+opencv-python
+numpy
+imantics
+pycocotools
+matplotlib
+onnxruntime
+onnx
+git+https://github.com/facebookresearch/segment-anything.git
