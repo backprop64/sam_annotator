@@ -27,4 +27,18 @@ Click the links below to download the checkpoint for the corresponding model typ
 ## (3) Start annotating
 
 to start the GUI, make sure you are in your conda enviornment and run:
+**images_path** path to folder containing images for annotation
+**metadata_path** this metadata file will be used to pick annotation up where you left off, if you are just starting to annotate images you wont need to provide this argument one and the metadata file will be created for you located within the image path folder.
+
+    --images_path. path/to/image_folder/ 
+    --metadata_path path/to/image_folder/metadata.json
+    --sam_weights_path path/to/sam.pt
+
+## controls:
+ <space> 
+ <esc>
+ <q>
+ left click
+ right click
+
 
