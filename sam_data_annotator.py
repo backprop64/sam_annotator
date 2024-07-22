@@ -33,14 +33,14 @@ parser.add_argument(
 )
 
 args = parser.parse_args()
-
-if 'vit_h' in args.sam_weights_path:
-    sam = sam_model_registry['vit_h'](checkpoint=args.sam_weights_path)
-if 'vit_l' in args.sam_weights_path:
-    sam = sam_model_registry['vit_l'](checkpoint=args.sam_weights_path)
-if 'vit_b' in args.sam_weights_path:
-    sam = sam_model_registry['vit_b'](checkpoint=args.sam_weights_path)
-else:
+try:
+    if 'vit_h' in args.sam_weights_path:
+        sam = sam_model_registry['vit_h'](checkpoint=args.sam_weights_path)
+    if 'vit_l' in args.sam_weights_path:
+        sam = sam_model_registry['vit_l'](checkpoint=args.sam_weights_path)
+    if 'vit_b' in args.sam_weights_path:
+        sam = sam_model_registry['vit_b'](checkpoint=args.sam_weights_path)
+except:
     print('invalid segment anything model weights, checkout the readme for help')
     exit()
 
