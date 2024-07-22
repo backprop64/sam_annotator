@@ -73,7 +73,7 @@ else:
         metadata_path = args.metadata_path
         annotations = metadata['annotations']
         imgs_already_annotated = [ann['file_name'] for ann in annotations]
-        images_to_annotate = [img for img in images_to_annotate if os.path.join(os.path.normpath(img).split('/')[-2],os.path.normpath(img).split('/')[-1]) not in imgs_already_annotated]
+        images_to_annotate = [img for img in images_to_annotate if os.path.join(os.path.normpath(img).split(os.sep)[-2],os.path.normpath(img).split(os.sep)[-1]) not in imgs_already_annotated]
         print(len(images_to_annotate), 'images left to annotate')
 
     except:
@@ -165,7 +165,7 @@ for img_path in tqdm(images_to_annotate):
 
     datapoint = copy.deepcopy(datapoint_template)
 
-    datapoint["file_name"] = os.path.join(os.path.normpath(img_path).split('/')[-2],os.path.normpath(img_path).split('/')[-1])
+    datapoint["file_name"] = os.path.join(os.path.normpath(img_path).split(os.sep)[-2],os.path.normpath(img_path).split(os.sep)[-1])
     datapoint["height"] = img.shape[0]
     datapoint["width"] = img.shape[1]
     datapoint["image_id"] = len(metadata['annotations'])
