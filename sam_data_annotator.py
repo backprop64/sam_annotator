@@ -33,6 +33,7 @@ parser.add_argument(
 )
 
 args = parser.parse_args()
+
 try:
     if 'vit_h' in args.sam_weights_path:
         sam = sam_model_registry['vit_h'](checkpoint=args.sam_weights_path)
