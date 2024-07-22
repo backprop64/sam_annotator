@@ -29,7 +29,7 @@ Click the links below to download the checkpoint for the corresponding model typ
 ### Arguments:
 run sam_data_annotator.py with the following arguments: 
 - `--images_path`: Path to folder containing images for annotation
-- `--metadata_path`: Path to metadata file (optional for first-time use)
+- `--metadata_path`: Path to metadata file (not required for first-time use, see the note)
 - `--sam_weights_path`: Path to SAM model weights
 
 **Note**: If you're starting annotations for the first time, the metadata file will be created automatically in the image folder.
