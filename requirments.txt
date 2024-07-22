@@ -1,4 +1,6 @@
 tqdm
+torch
+torchvision
 opencv-python
 numpy
 imantics
