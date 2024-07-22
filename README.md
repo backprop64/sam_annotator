@@ -35,14 +35,6 @@ run sam_data_annotator.py with the following arguments:
 
 **Note**: If you're starting annotations for the first time, the metadata file will be created automatically in the image folder.
 
-## (Optional) Demo our tool on a small set of cat images:
-
-Download the `vit_b`: [ViT-B SAM model](https://dl.fbaipublicfiles.com/segment_anything/sam_vit_b_01ec64.pth) and run the following command in your terminal (while inside the sam_annotator folder)
-
-```python 
-python sam_data_annotator.py --images_path demo_images --sam_weights_path path/to/sam_vit_b_01ec64.pth 
-```
-
 
 ### Controls
 Once an image is displayed, use the following controls:
@@ -60,6 +52,17 @@ Once an image is displayed, use the following controls:
 - **q**: Quit GUI
   - Current image annotation won't be saved
   - All previous annotations will be saved
+
+
+
+
+## (Optional) Demo our tool on a small set of cat images:
+
+Download the `vit_b`: [ViT-B SAM model](https://dl.fbaipublicfiles.com/segment_anything/sam_vit_b_01ec64.pth) and run the following command in your terminal (while inside the sam_annotator folder)
+
+```python 
+python sam_data_annotator.py --images_path demo_images --sam_weights_path path/to/sam_vit_b_01ec64.pth 
+```
 
 ## Citing our annotation tool 
 If this tool was useful for your project, please cite us!
