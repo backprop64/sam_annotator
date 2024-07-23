@@ -1,7 +1,7 @@
 # GUI for interactive segmentation with Segment Anything Model
-A simple opencv gui with minimal dependencies that lets a user annotate instance segmenation data with Segment Anything Model turning user clicks into masks. This annotate assumes that you're creating class-agnostic detection dataset meaning everything gets stored with the same class ID. 
+A simple gui with minimal dependencies that lets a user annotate instance segmenation data with Segment Anything Model interactivly, automatically turning user clicks (point prompts) into instance masks. This annotation tool assumes that you're creating class-agnostic detection dataset meaning everything gets stored with the same class ID. 
 
-This was developed to quickly annotate instance segementation datasets used for developing a mouse detection model (DAMM)
+This tool was developed to quickly annotate instance segementation datasets used for developing a mouse detection model (DAMM)
 
 ## (1) Setup The Codebase  
 
