@@ -3,7 +3,7 @@ A simple opencv gui with minimal dependencies that lets a user annotate instance
 
 This was developed to quickly annotate instance segementation datasets used for developing a mouse detection model (DAMM)
 
-## (1) Setup our codebase locally 
+## (1) Setup The Codebase  
 
 ```bash
 $ conda create -n sam_annotator python=3.9 
@@ -17,7 +17,6 @@ $ pip install -r sam_annotator/requirements.txt
 ```bash 
 $ conda install pytorch torchvision torchaudio pytorch-cuda=11.8 -c pytorch -c nvidia # example installation with cuda 11.8 support
 ```
----
 
 ## (2) Get Segment Anything Model Weights (from [SAM repo](https://github.dev/facebookresearch/segment-anything))
 
@@ -30,7 +29,7 @@ Click the links below to download the checkpoint for the corresponding model typ
 - `vit_l`: [ViT-L SAM model.](https://dl.fbaipublicfiles.com/segment_anything/sam_vit_l_0b3195.pth)
 - `vit_b`: [ViT-B SAM model.](https://dl.fbaipublicfiles.com/segment_anything/sam_vit_b_01ec64.pth)
 
-## (3) Start annotating
+## (3) Start Annotating
 
 ### Arguments:
 run sam_data_annotator.py with the following arguments: 
@@ -41,14 +40,11 @@ run sam_data_annotator.py with the following arguments:
 
 **Note**: If you're starting annotations for the first time, the metadata file will be created automatically in the image folder.
 
-
 ### Controls:
 Once an image is displayed, use the following controls:
-
 #### clicking objects to create masks (giving sam point prompts)
 - **Left click**: Add a foreground point (pixel belonging to the object)
 - **Right click**: Add a background point (pixel not belonging to the object)
-
 #### Navigation
 - **space**: Start annotating the next instance within the same image
   - Clears current point prompt
@@ -58,9 +54,6 @@ Once an image is displayed, use the following controls:
 - **q**: Quit GUI
   - Current image annotation won't be saved
   - All previous annotations will be saved
-
-
-
 
 ## (Optional) Demo our tool on a small set of cat images:
 
