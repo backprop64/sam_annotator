@@ -9,7 +9,13 @@ This was developed to quickly annotate instance segementation datasets used for 
 $ conda create -n sam_annotator python=3.9 
 $ conda activate sam_annotator
 $ git clone https://github.com/backprop64/sam_annotator
-$ pip install -r sam_annotator/requirements-gpu.txt
+$ pip install -r sam_annotator/requirements.txt
+```
+
+**important**: download [pytorch](https://pytorch.org/get-started/locally/) with cuda support to use gpu acceleration 
+
+```bash 
+$ conda install pytorch torchvision torchaudio pytorch-cuda=11.8 -c pytorch -c nvidia # example installation with cuda 11.8 support
 ```
 ---
 
@@ -36,7 +42,7 @@ run sam_data_annotator.py with the following arguments:
 **Note**: If you're starting annotations for the first time, the metadata file will be created automatically in the image folder.
 
 
-### Controls
+### Controls:
 Once an image is displayed, use the following controls:
 
 #### clicking objects to create masks (giving sam point prompts)
